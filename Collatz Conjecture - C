@@ -1,0 +1,28 @@
+/* Collatz Conjecture */
+
+#include <stdio.h>
+
+int main(void) {
+	
+int number,step;
+
+printf("What is your number? \n");
+scanf("%d \n", &number);
+printf("%d \n", number);
+
+	while (number != 1)
+	{
+		if (number % 2 == 0)
+		{
+			number = number/2;
+			step = step + 1;
+		}
+		else
+		{
+			number = 3 * number + 1;
+			step = step + 1;
+		}
+	}
+	printf("Algorithmn complete, it took %d steps \n", step);
+	return 0;
+}
